@@ -28,7 +28,7 @@ gcov_report:
 	$(OPEN) ./coverage/index.html
 
 check:
-	cp ../materials/linters/.clang-format ./
+	cp linters/.clang-format ./
 	clang-format -n $(SOURSE)
 	cppcheck --std=c++17 --language=c++ --enable=all --suppress=missingInclude --suppress=unusedFunction --suppress=uselessAssignmentArg --suppress=unreadVariable $(SOURSE)
 	rm .clang-format
